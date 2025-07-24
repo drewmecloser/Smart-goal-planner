@@ -12,7 +12,8 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const API_URL = 'http://localhost:3000/goals';
+
+  const API_URL = 'YOUR_RENDER_BACKEND_URL/goals'; 
 
   useEffect(() => {
     fetch(API_URL)
