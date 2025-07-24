@@ -17,7 +17,7 @@ function GoalCard({ goal, onUpdateGoal, onDeleteGoal }) {
   const handleDeposit = () => {
     const amount = parseFloat(depositAmount);
     if (isNaN(amount) || amount <= 0) {
-      alert('Please enter a valid positive deposit amount.');
+      console.warn('Invalid deposit amount entered.');
       return;
     }
 
@@ -28,14 +28,12 @@ function GoalCard({ goal, onUpdateGoal, onDeleteGoal }) {
   };
 
   const handleDelete = () => {
-    if (window.confirm(`Are you sure you want to delete the goal "${name}"?`)) {
-      onDeleteGoal(id);
-    }
+    onDeleteGoal(id);
   };
 
   const handleEditSubmit = () => {
     if (!editName || !editTargetAmount || !editCategory || !editDeadline) {
-      alert('Please fill in all fields for editing.');
+      console.warn('Please fill in all fields for editing a goal.');
       return;
     }
 
