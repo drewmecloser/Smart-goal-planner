@@ -13,7 +13,7 @@ function App() {
   const [error, setError] = useState(null);
 
 
-  const API_URL = 'YOUR_RENDER_BACKEND_URL/goals'; 
+  const API_URL = 'https://smart-goal-planner-1-9tjm.onrender.com/goals'; 
 
   useEffect(() => {
     fetch(API_URL)
